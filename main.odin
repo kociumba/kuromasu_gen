@@ -7,8 +7,8 @@ import "core:slice"
 import "core:strings"
 import "core:math/rand"
 import "core:time"
-import strconv "core:strconv"
-import intrinsics "base:intrinsics"
+import "core:strconv"
+import "base:intrinsics"
 
 visible_white :: proc(b: ^Board, pos: Position) -> (desired_matched: VisibileState, visible: int) {
     if pos.x < 0 || pos.x >= b.size.w || pos.y < 0 || pos.y >= b.size.h {
@@ -330,7 +330,7 @@ main :: proc() {
         }
     }
 
-    for i in 0 ..= repeat {
+    for i in 0 ..< repeat {
         g := Grid{
             w = 9, h = 9
         }
